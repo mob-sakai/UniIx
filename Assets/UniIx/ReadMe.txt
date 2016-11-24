@@ -9,8 +9,6 @@ Installation
 ---
 
 Use [UniIx.unitypackage](./UniIx.unitypackage) to install.  
-Requires [UniRx](https://github.com/neuecc/UniRx) or [UniRx(AssetStore)](https://www.assetstore.unity3d.com/jp/#!/content/17276) to be imported.
-(Only for `Do` operator.)
 
 
 
@@ -20,7 +18,7 @@ How To Update UniIx
 1. Copy .cs files from [Interactive Extensions](https://github.com/Reactive-Extensions/Rx.NET/tree/master/Ix.NET/Source/System.Interactive).
 2. Paste to Assets/UniIx directory.
 3. Convert `nameof(xxx)` to `"xxx"` in .cs files.
-4. Add `using UniRx;` to Do.cs.
+3. Comment `Do<TSource>(this IEnumerable<TSource> source, IObserver<TSource> observer)` method in `Do.cs`.
 
 
 

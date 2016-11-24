@@ -5,7 +5,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using UniRx;
 
 namespace System.Linq
 {
@@ -99,15 +98,15 @@ namespace System.Linq
         /// <param name="source">Source sequence.</param>
         /// <param name="observer">Observer to invoke notification calls on.</param>
         /// <returns>Sequence exhibiting the side-effects of observer method invocation upon enumeration.</returns>
-        public static IEnumerable<TSource> Do<TSource>(this IEnumerable<TSource> source, IObserver<TSource> observer)
-        {
-            if (source == null)
-                throw new ArgumentNullException("source");
-            if (observer == null)
-                throw new ArgumentNullException("observer");
-
-            return DoHelper(source, observer.OnNext, observer.OnError, observer.OnCompleted);
-        }
+//        public static IEnumerable<TSource> Do<TSource>(this IEnumerable<TSource> source, IObserver<TSource> observer)
+//        {
+//            if (source == null)
+//                throw new ArgumentNullException("source");
+//            if (observer == null)
+//                throw new ArgumentNullException("observer");
+//
+//            return DoHelper(source, observer.OnNext, observer.OnError, observer.OnCompleted);
+//        }
 
         /// <summary>
         ///     Generates an enumerable sequence by repeating a source sequence as long as the given loop postcondition holds.
